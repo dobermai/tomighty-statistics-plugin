@@ -32,6 +32,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tomighty.plugin.folder>${user.home}/.tomighty/plugins</tomighty.plugin.folder>
+        <tomighty.plugin.file>${project.build.directory}/${project.build.finalName}.${project.packaging}</tomighty.plugin.file>
     </properties>
 
     <dependencies>
@@ -60,6 +62,37 @@
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <mkdir dir="${tomighty.plugin.folder}"/>
+                                <copy file="${tomighty.plugin.file}" todir="${tomighty.plugin.folder}"/>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${tomighty.plugin.folder}</directory>
+                            <includes>
+                                <include>${project.build.finalName}.${project.packaging}</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
         </plugins>
