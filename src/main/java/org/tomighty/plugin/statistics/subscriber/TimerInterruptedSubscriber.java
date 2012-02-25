@@ -1,4 +1,4 @@
-package org.tomighty.plugin.statistics;
+package org.tomighty.plugin.statistics.subscriber;
 
 import org.tomighty.bus.Subscriber;
 import org.tomighty.bus.messages.time.TimerInterrupted;
@@ -6,7 +6,8 @@ import org.tomighty.bus.messages.time.TimerInterrupted;
 /**
  * @author dobermai
  */
-public class TimerInterruptedSubscriber implements Subscriber<TimerInterrupted>{
+public class TimerInterruptedSubscriber implements Subscriber<TimerInterrupted> {
+
     @Override
     public void receive(final TimerInterrupted timerInterrupted) {
         System.out.println("interrupted");

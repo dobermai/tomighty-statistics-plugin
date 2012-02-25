@@ -1,4 +1,4 @@
-package org.tomighty.plugin.statistics;
+package org.tomighty.plugin.statistics.subscriber;
 
 import org.tomighty.bus.Subscriber;
 import org.tomighty.bus.messages.time.TimerEnd;
