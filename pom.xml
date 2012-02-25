@@ -7,6 +7,62 @@
     <groupId>tomighty-statistics-plugin</groupId>
     <artifactId>tomighty-statistics-plugin</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>Tomighty Statistics Plugin</name>
 
-    
+    <description>
+        A Plugin for Tomighty which logs statistics for finished and interrupted
+        Pomodoros
+    </description>
+
+    <developers>
+        <developer>
+            <id>dobermai</id>
+            <name>Dominik Obermaier</name>
+            <email>dominik.obermaier@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.tomighty</groupId>
+            <artifactId>tomighty</artifactId>
+            <version>0.8</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.0.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
