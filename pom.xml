@@ -32,7 +32,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tomighty.plugin.folder>${user.home}/.tomighty/plugins</tomighty.plugin.folder>
+        <tomighty.plugin.folder>${user.home}/.tomighty/plugins/statistics</tomighty.plugin.folder>
         <tomighty.plugin.file>${project.build.directory}/${project.build.finalName}.${project.packaging}</tomighty.plugin.file>
     </properties>
 
