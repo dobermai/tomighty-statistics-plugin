@@ -33,14 +33,17 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <tomighty.plugin.folder>${user.home}/.tomighty/plugins/statistics</tomighty.plugin.folder>
-        <tomighty.plugin.file>${project.build.directory}/${project.build.finalName}.${project.packaging}</tomighty.plugin.file>
+        <tomighty.plugin.file>
+            ${project.build.directory}/${project.build.finalName}.${project.packaging}
+        </tomighty.plugin.file>
     </properties>
 
     <dependencies>
+
         <dependency>
-            <groupId>org.tomighty</groupId>
-            <artifactId>tomighty</artifactId>
-            <version>0.8</version>
+            <groupId>org.tomighty.</groupId>
+            <artifactId>tomighty-api</artifactId>
+            <version>0.8.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -76,6 +79,9 @@
                             <tasks>
                                 <mkdir dir="${tomighty.plugin.folder}"/>
                                 <copy file="${tomighty.plugin.file}" todir="${tomighty.plugin.folder}"/>
+                                <copy todir="${tomighty.plugin.folder}" verbose="true">
+                                    <fileset dir="${project.build.directory}/lib"/>
+                                </copy>
                             </tasks>
                         </configuration>
                     </execution>
@@ -88,12 +94,52 @@
                     <filesets>
                         <fileset>
                             <directory>${tomighty.plugin.folder}</directory>
-                            <includes>
-                                <include>${project.build.finalName}.${project.packaging}</include>
-                            </includes>
+                            <!--<includes>-->
+                            <!--<include>${project.build.finalName}.${project.packaging}</include>-->
+                            <!--</includes>-->
                         </fileset>
                     </filesets>
                 </configuration>
+            </plugin>
+            <!--<plugin>-->
+            <!--<artifactId>maven-assembly-plugin</artifactId>-->
+            <!--<version>2.3</version>-->
+            <!--<configuration>-->
+            <!--<archive>-->
+            <!--<manifest>-->
+            <!--<addClasspath>true</addClasspath>-->
+            <!--<mainClass>org.tomighty.plugin.statistics.StatisticsPlugin</mainClass>-->
+            <!--</manifest>-->
+            <!--</archive>-->
+            <!--<descriptorRefs>-->
+            <!--<descriptorRef>jar-with-dependencies</descriptorRef>-->
+            <!--</descriptorRefs>-->
+            <!--</configuration>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<id>make-jar-with-dependencies</id>-->
+            <!--<phase>package</phase>-->
+            <!--<goals>-->
+            <!--<goal>single</goal>-->
+            <!--</goals>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

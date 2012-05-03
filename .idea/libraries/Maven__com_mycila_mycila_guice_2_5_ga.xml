@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.mycila:mycila-guice:2.5.ga">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/mycila-guice/2.5.ga/mycila-guice-2.5.ga.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/mycila-guice/2.5.ga/mycila-guice-2.5.ga-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/mycila/mycila-guice/2.5.ga/mycila-guice-2.5.ga-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

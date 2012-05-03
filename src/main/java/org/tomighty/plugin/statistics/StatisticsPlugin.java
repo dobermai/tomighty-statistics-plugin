@@ -1,35 +1,39 @@
 package org.tomighty.plugin.statistics;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.tomighty.bus.Bus;
-import org.tomighty.bus.messages.time.TimerEnd;
-import org.tomighty.bus.messages.time.TimerInterrupted;
-import org.tomighty.ioc.Initializable;
-import org.tomighty.ioc.Inject;
-import org.tomighty.ioc.New;
-import org.tomighty.log.Log;
+import org.tomighty.bus.messages.timer.TimerInterrupted;
 import org.tomighty.plugin.Plugin;
-import org.tomighty.plugin.statistics.subscriber.TimerEndSubscriber;
+import org.tomighty.plugin.statistics.subscriber.TimerFinishedSubscriber;
 import org.tomighty.plugin.statistics.subscriber.TimerInterruptedSubscriber;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import java.net.URISyntaxException;
 
 /**
  * @author dobermai
  */
-public class StatisticsPlugin implements Plugin, Initializable {
+public class StatisticsPlugin implements Plugin {
+
+
+    private final Bus bus;
+
+    private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Inject
-    @New
-    private Log log;
+    public StatisticsPlugin(Bus bus) throws URISyntaxException, ClassNotFoundException {
+        this.bus = bus;
 
-    @Inject
-    private Bus bus;
+    }
 
-    @Override
+    @PostConstruct
     public void initialize() {
 
-        log.info("Initialized Statistics Plugin");
-
         bus.subscribe(new TimerInterruptedSubscriber(), TimerInterrupted.class);
-        bus.subscribe(new TimerEndSubscriber(), TimerEnd.class);
+        bus.subscribe(new TimerFinishedSubscriber(), org.tomighty.bus.messages.timer.TimerFinished.class);
 
+        log.info("Statistics Plugin Information");
     }
 }
