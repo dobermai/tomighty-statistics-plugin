@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ca7c73-44fa-4286-8631-e06b321aae8c" name="Default" comment="fixed automatic deployment when doing a mvn install">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/Modules.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/StatisticsWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/Status.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/CSVStatisticsWriter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/StatisticsPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/StatisticsPlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinishedSubscriber.java" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinishedSubscriber.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java" afterPath="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties" afterPath="$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tomighty-statistics-plugin.iml" afterPath="$PROJECT_DIR$/tomighty-statistics-plugin.iml" />
     </list>
     <ignored path="tomighty-statistics-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,7 +73,7 @@
       <file leaf-file-name="TimerFinishedSubscriber.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinishedSubscriber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="30" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+            <state line="17" column="32" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,29 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimerInterruptedSubscriber.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TimerInterruptedSubscriber.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+            <state line="20" column="29" selection-start="538" selection-end="538" vertical-scroll-proportion="0.25119618">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsPlugin.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="StatisticsPlugin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/StatisticsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="17" selection-start="777" selection-end="777" vertical-scroll-proportion="0.30177516">
+            <state line="26" column="52" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tomighty-plugin.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties">
+      <file leaf-file-name="Modules.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/Modules.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="0" column="38" selection-start="8" selection-end="38" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,7 +113,36 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="36" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.0">
+            <state line="47" column="22" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSVStatisticsWriter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/CSVStatisticsWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="25" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticsWriter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/StatisticsWriter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="35" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Status.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/Status.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,22 +162,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TimerEndSubscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TimerInterruptedSubscriber.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/TimerInterruptedSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/persistence/entity/Pomodoro.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/persistence/entity/Day.java" />
         <option value="$PROJECT_DIR$/src/main/resources/datanucleus.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerEndSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinished.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinishedSubscriber.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/Status.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/StatisticsWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/StatisticsWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/CSVWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/CSVStatisticsWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/Modules.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties" />
         <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/StatisticsPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java" />
       </list>
     </option>
   </component>
@@ -179,7 +218,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="y" value="26" />
     <option name="width" value="1676" />
     <option name="height" value="1028" />
   </component>
@@ -333,6 +372,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="writer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tomighty-statistics-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tomighty-statistics-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="writer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="csv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tomighty-statistics-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tomighty-statistics-plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="statistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="subscriber" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -369,6 +472,11 @@
         </serverdata>
       </server>
     </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.tomighty.plugin.statistics.writer" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -570,7 +678,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1676" height="1028" extended-state="0" />
+    <frame x="0" y="26" width="1676" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -659,11 +767,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-api-jdo/3.0.1/datanucleus-api-jdo-3.0.1-sources.jar!/org/datanucleus/api/jdo/JDOPersistenceManagerFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="8" selection-start="4346" selection-end="4346" vertical-scroll-proportion="0.513308" />
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/org/datanucleus/datanucleus-api-jdo/3.0.1/datanucleus-api-jdo-3.0.1.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -689,37 +792,85 @@
         <state line="1800" column="48" selection-start="74676" selection-end="74676" vertical-scroll-proportion="0.35948905" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="36" selection-start="2186" selection-end="2186" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerFinishedSubscriber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+        <state line="17" column="32" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+        <state line="47" column="22" selection-start="1616" selection-end="1616" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/tomighty/tomighty-api/0.8.0/tomighty-api-0.8.0.jar!/org/tomighty/time/Time.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="28" selection-start="945" selection-end="945" vertical-scroll-proportion="0.49938348">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/tomighty/tomighty-api/0.8.0/tomighty-api-0.8.0.jar!/org/tomighty/Phase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="18" selection-start="155" selection-end="155" vertical-scroll-proportion="0.075187966">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/csv/CSVStatisticsWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="25" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tomighty-plugin.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/Modules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="38" selection-start="8" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/writer/StatisticsWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/StatisticsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="17" selection-start="777" selection-end="777" vertical-scroll-proportion="0.30177516">
+        <state line="26" column="52" selection-start="773" selection-end="773" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/tomighty/plugin/statistics/subscriber/TimerInterruptedSubscriber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="538" selection-end="538" vertical-scroll-proportion="0.25119618">
           <folding />
         </state>
       </provider>

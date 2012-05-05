@@ -19,20 +19,23 @@ public class StatisticsPlugin implements Plugin {
 
 
     private final Bus bus;
+    private final TimerInterruptedSubscriber subscriber;
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Inject
-    public StatisticsPlugin(Bus bus) throws URISyntaxException, ClassNotFoundException {
+    public StatisticsPlugin(final Bus bus, TimerInterruptedSubscriber subscriber) throws URISyntaxException, ClassNotFoundException {
         this.bus = bus;
 
+        this.subscriber = subscriber;
     }
 
     @PostConstruct
     public void initialize() {
 
-        bus.subscribe(new TimerInterruptedSubscriber(), TimerInterrupted.class);
+        bus.subscribe(subscriber, TimerInterrupted.class);
         bus.subscribe(new TimerFinishedSubscriber(), org.tomighty.bus.messages.timer.TimerFinished.class);
+
 
         log.info("Statistics Plugin Information");
     }
