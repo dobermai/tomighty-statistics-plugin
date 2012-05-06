@@ -16,9 +16,10 @@
 
 package org.tomighty.plugin.statistics.writer;
 
+import org.tomighty.Phase;
+
 public interface StatisticsWriter {
 
 
-    void append(final Status status);
-
+    void append(Phase phase, Status status);
 }

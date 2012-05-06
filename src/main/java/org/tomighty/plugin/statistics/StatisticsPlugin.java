@@ -21,9 +21,11 @@ import org.slf4j.LoggerFactory;
 import org.tomighty.bus.Bus;
 import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
+import org.tomighty.bus.messages.timer.TimerStarted;
 import org.tomighty.plugin.Plugin;
 import org.tomighty.plugin.statistics.subscriber.TimerFinishedSubscriber;
 import org.tomighty.plugin.statistics.subscriber.TimerInterruptedSubscriber;
+import org.tomighty.plugin.statistics.subscriber.TimerStartedSubscriber;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -34,16 +36,20 @@ public class StatisticsPlugin implements Plugin {
     private final Bus bus;
     private final TimerInterruptedSubscriber subscriber;
     private final TimerFinishedSubscriber finishedSubscriber;
+    private final TimerStartedSubscriber startedSubscriber;
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     @Inject
     public StatisticsPlugin(final Bus bus, final TimerInterruptedSubscriber interruptedSubscriber,
-                            final TimerFinishedSubscriber finishedSubscriber) {
+                            final TimerFinishedSubscriber finishedSubscriber,
+                            final TimerStartedSubscriber startedSubscriber
+    ) {
         this.bus = bus;
 
         this.subscriber = interruptedSubscriber;
         this.finishedSubscriber = finishedSubscriber;
+        this.startedSubscriber = startedSubscriber;
     }
 
     @PostConstruct
@@ -51,6 +57,7 @@ public class StatisticsPlugin implements Plugin {
 
         bus.subscribe(subscriber, TimerInterrupted.class);
         bus.subscribe(finishedSubscriber, TimerFinished.class);
+        bus.subscribe(startedSubscriber, TimerStarted.class);
 
 
         log.info("Statistics Plugin initialized");

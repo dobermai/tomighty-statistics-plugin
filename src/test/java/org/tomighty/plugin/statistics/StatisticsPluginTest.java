@@ -21,6 +21,7 @@ import org.tomighty.bus.Bus;
 import org.tomighty.bus.Subscriber;
 import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
+import org.tomighty.bus.messages.timer.TimerStarted;
 
 import static org.mockito.Mockito.*;
 
@@ -32,11 +33,12 @@ public class StatisticsPluginTest {
         final Bus busMock = mock(Bus.class);
 
 
-        StatisticsPlugin plugin = new StatisticsPlugin(busMock, null, null);
+        StatisticsPlugin plugin = new StatisticsPlugin(busMock, null, null, null);
         plugin.initialize();
 
         //Test that we subscribe to all events
         verify(busMock).subscribe(any(Subscriber.class), eq(TimerInterrupted.class));
         verify(busMock).subscribe(any(Subscriber.class), eq(TimerFinished.class));
+        verify(busMock).subscribe(any(Subscriber.class), eq(TimerStarted.class));
     }
 }

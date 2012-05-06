@@ -38,7 +38,7 @@ public class TimerFinishedSubscriber implements Subscriber<TimerFinished> {
 
     @Override
     public void receive(final TimerFinished timerEnd) {
-        writer.append(Status.FINISHED);
-        log.debug("Received Finished Event");
+        writer.append(timerEnd.getPhase(), Status.FINISHED);
+        log.debug("Received Finished Event for phase {}", timerEnd.getPhase());
     }
 }

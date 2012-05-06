@@ -19,28 +19,26 @@ package org.tomighty.plugin.statistics.subscriber;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tomighty.bus.Subscriber;
-import org.tomighty.bus.messages.timer.TimerInterrupted;
+import org.tomighty.bus.messages.timer.TimerStarted;
 import org.tomighty.plugin.statistics.writer.StatisticsWriter;
 import org.tomighty.plugin.statistics.writer.Status;
 
 import javax.inject.Inject;
 
-
-public class TimerInterruptedSubscriber implements Subscriber<TimerInterrupted> {
+public class TimerStartedSubscriber implements Subscriber<TimerStarted> {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     private StatisticsWriter writer;
 
     @Inject
-    public TimerInterruptedSubscriber(StatisticsWriter writer) {
+    public TimerStartedSubscriber(StatisticsWriter writer) {
         this.writer = writer;
     }
 
     @Override
-    public void receive(final TimerInterrupted timerInterrupted) {
-
-        writer.append(timerInterrupted.getPhase(), Status.INTERRUPTED);
-        log.debug("Received Interrupted Event for phase {}", timerInterrupted.getPhase());
+    public void receive(final TimerStarted timerStarted) {
+        writer.append(timerStarted.getPhase(), Status.STARTED);
+        log.debug("Received Started Event for phase {}", timerStarted.getPhase());
     }
 }

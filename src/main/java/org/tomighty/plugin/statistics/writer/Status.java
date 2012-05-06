@@ -18,5 +18,5 @@ package org.tomighty.plugin.statistics.writer;
 
 public enum Status {
 
-    FINISHED, INTERRUPTED
+    FINISHED, INTERRUPTED, STARTED
 }

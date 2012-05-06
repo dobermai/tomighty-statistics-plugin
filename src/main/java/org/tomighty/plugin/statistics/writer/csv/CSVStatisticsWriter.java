@@ -20,6 +20,7 @@ import au.com.bytecode.opencsv.CSVWriter;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.tomighty.Phase;
 import org.tomighty.plugin.statistics.config.Directories;
 import org.tomighty.plugin.statistics.writer.StatisticsWriter;
 import org.tomighty.plugin.statistics.writer.Status;
@@ -43,14 +44,14 @@ public class CSVStatisticsWriter implements StatisticsWriter {
     }
 
     @Override
-    public void append(final Status status) {
+    public void append(final Phase phase, final Status status) {
 
         final File file = new File(directories.getStatsDirectory(), FILENAME);
 
         try {
 
             final CSVWriter writer = new CSVWriter(new FileWriter(file, true));
-            writer.writeNext(new String[]{DateTime.now().toString(), status.name()});
+            writer.writeNext(new String[]{DateTime.now().toString(), phase.name(), status.name()});
 
             writer.close();
         } catch (IOException e) {
