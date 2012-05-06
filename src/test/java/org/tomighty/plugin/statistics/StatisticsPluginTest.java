@@ -14,33 +14,29 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.subscriber;
+package org.tomighty.plugin.statistics;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.junit.Test;
+import org.tomighty.bus.Bus;
 import org.tomighty.bus.Subscriber;
+import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
-import org.tomighty.plugin.statistics.writer.StatisticsWriter;
-import org.tomighty.plugin.statistics.writer.Status;
 
-import javax.inject.Inject;
+import static org.mockito.Mockito.*;
+
+public class StatisticsPluginTest {
+
+    @Test
+    public void testBusSubscriptions() throws Exception {
+
+        final Bus busMock = mock(Bus.class);
 
 
-public class TimerInterruptedSubscriber implements Subscriber<TimerInterrupted> {
+        StatisticsPlugin plugin = new StatisticsPlugin(busMock, null, null);
+        plugin.initialize();
 
-    private final Logger log = LoggerFactory.getLogger(getClass());
-
-    private StatisticsWriter writer;
-
-    @Inject
-    public TimerInterruptedSubscriber(StatisticsWriter writer) {
-        this.writer = writer;
-    }
-
-    @Override
-    public void receive(final TimerInterrupted timerInterrupted) {
-
-        writer.append(Status.INTERRUPTED);
-        log.debug("Received Interrupted Event");
+        //Test that we subscribe to all events
+        verify(busMock).subscribe(any(Subscriber.class), eq(TimerInterrupted.class));
+        verify(busMock).subscribe(any(Subscriber.class), eq(TimerFinished.class));
     }
 }
