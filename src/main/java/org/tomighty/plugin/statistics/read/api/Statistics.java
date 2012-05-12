@@ -14,18 +14,16 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics;
+package org.tomighty.plugin.statistics.read.api;
 
-import com.google.inject.AbstractModule;
-import org.tomighty.plugin.statistics.read.api.Statistics;
-import org.tomighty.plugin.statistics.read.impl.csv.StatisticsCSVImpl;
-import org.tomighty.plugin.statistics.writer.StatisticsWriter;
-import org.tomighty.plugin.statistics.writer.csv.CSVStatisticsWriter;
+import org.tomighty.plugin.statistics.Pomodoro;
 
-public class Modules extends AbstractModule {
-    @Override
-    protected void configure() {
-        bind(StatisticsWriter.class).to(CSVStatisticsWriter.class);
-        bind(Statistics.class).to(StatisticsCSVImpl.class);
-    }
+import java.util.List;
+
+/**
+ * @author dobermai
+ */
+public interface Statistics {
+
+    List<Pomodoro> getAllPomodoros();
 }
