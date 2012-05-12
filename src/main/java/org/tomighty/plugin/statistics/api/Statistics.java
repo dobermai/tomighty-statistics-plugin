@@ -14,7 +14,7 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.read.api;
+package org.tomighty.plugin.statistics.api;
 
 import org.tomighty.plugin.statistics.Pomodoro;
 
@@ -26,4 +26,6 @@ import java.util.List;
 public interface Statistics {
 
     List<Pomodoro> getAllPomodoros();
+
+    void deleteAllPomodoros();
 }

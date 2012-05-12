@@ -17,8 +17,8 @@
 package org.tomighty.plugin.statistics;
 
 import com.google.inject.AbstractModule;
-import org.tomighty.plugin.statistics.read.api.Statistics;
-import org.tomighty.plugin.statistics.read.impl.csv.StatisticsCSVImpl;
+import org.tomighty.plugin.statistics.api.Statistics;
+import org.tomighty.plugin.statistics.api.csv.StatisticsCSVImpl;
 import org.tomighty.plugin.statistics.writer.StatisticsWriter;
 import org.tomighty.plugin.statistics.writer.csv.CSVStatisticsWriter;
 

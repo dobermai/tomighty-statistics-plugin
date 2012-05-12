@@ -14,14 +14,14 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.read.impl.csv;
+package org.tomighty.plugin.statistics.api.csv;
 
 import au.com.bytecode.opencsv.CSVReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tomighty.plugin.statistics.Pomodoro;
+import org.tomighty.plugin.statistics.api.Statistics;
 import org.tomighty.plugin.statistics.config.Directories;
-import org.tomighty.plugin.statistics.read.api.Statistics;
 import org.tomighty.plugin.statistics.util.csv.CSVUtil;
 
 import javax.inject.Inject;
@@ -41,7 +41,7 @@ public class StatisticsCSVImpl implements Statistics {
 
     private final Directories directories;
 
-    private final Logger log = LoggerFactory.getLogger(getClass());
+    private static final Logger log = LoggerFactory.getLogger(StatisticsCSVImpl.class);
 
     @Inject
     public StatisticsCSVImpl(final Directories directories) {
@@ -67,5 +67,16 @@ public class StatisticsCSVImpl implements Statistics {
         }
         log.warn("Error while reading {}, no Pomodors available", statisticsCSVFile.getAbsolutePath());
         return new ArrayList<Pomodoro>();
+    }
+
+    @Override
+    public void deleteAllPomodoros() {
+        final File statisticsFile = new File(directories.getStatsDirectory(), FILENAME);
+        if (statisticsFile.delete()) {
+
+            log.info("Deleted {}", statisticsFile.getAbsolutePath());
+        } else {
+            log.error("Could not delete {}", statisticsFile.getAbsolutePath());
+        }
     }
 }
