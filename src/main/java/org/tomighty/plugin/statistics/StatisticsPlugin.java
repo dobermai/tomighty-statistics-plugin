@@ -22,7 +22,7 @@ import org.tomighty.bus.Bus;
 import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
 import org.tomighty.bus.messages.timer.TimerStarted;
-import org.tomighty.plugin.Plugin;
+import org.tomighty.plugin.DefaultPlugin;
 import org.tomighty.plugin.statistics.subscriber.TimerFinishedSubscriber;
 import org.tomighty.plugin.statistics.subscriber.TimerInterruptedSubscriber;
 import org.tomighty.plugin.statistics.subscriber.TimerStartedSubscriber;
@@ -30,7 +30,7 @@ import org.tomighty.plugin.statistics.subscriber.TimerStartedSubscriber;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-public class StatisticsPlugin implements Plugin {
+public class StatisticsPlugin extends DefaultPlugin {
 
 
     private final Bus bus;
