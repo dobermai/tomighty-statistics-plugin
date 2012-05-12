@@ -29,6 +29,9 @@ import org.tomighty.plugin.statistics.subscriber.TimerStartedSubscriber;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class StatisticsPlugin extends DefaultPlugin {
 
@@ -61,5 +64,17 @@ public class StatisticsPlugin extends DefaultPlugin {
 
 
         log.info("Statistics Plugin initialized");
+    }
+
+    @Override
+    public MenuItem getMenuItem() {
+        MenuItem statistics = new MenuItem("Statistics");
+        statistics.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                log.info("Statistics clicked");
+            }
+        });
+        return statistics;
     }
 }
