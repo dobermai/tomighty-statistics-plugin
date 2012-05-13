@@ -18,10 +18,26 @@ package org.tomighty.plugin.statistics.gui;
 
 import org.tomighty.plugin.DefaultPlugin;
 
+import java.awt.*;
+
 /**
  * @author dobermai
  */
 public class StatisticsGUIPlugin extends DefaultPlugin {
 
+    @Override
+    public MenuItem getMenuItem() {
+        final Menu statisticsMenu = new Menu("Statistics");
 
+        final MenuItem options = new MenuItem("Options");
+
+        final MenuItem todaysPomodoros = new MenuItem("Today");
+
+        statisticsMenu.add(options);
+        statisticsMenu.addSeparator();
+        statisticsMenu.add(todaysPomodoros);
+
+        return statisticsMenu;
+
+    }
 }
