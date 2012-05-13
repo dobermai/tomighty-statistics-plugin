@@ -17,13 +17,25 @@
 package org.tomighty.plugin.statistics.gui;
 
 import org.tomighty.plugin.DefaultPlugin;
+import org.tomighty.plugin.statistics.gui.dialogs.StatisticsDialog;
 
+import javax.inject.Inject;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * @author dobermai
  */
 public class StatisticsGUIPlugin extends DefaultPlugin {
+
+    private final StatisticsDialog statisticsDialog;
+
+    @Inject
+    public StatisticsGUIPlugin(final StatisticsDialog statisticsDialog) {
+
+        this.statisticsDialog = statisticsDialog;
+    }
 
     @Override
     public MenuItem getMenuItem() {
@@ -32,12 +44,17 @@ public class StatisticsGUIPlugin extends DefaultPlugin {
         final MenuItem options = new MenuItem("Options");
 
         final MenuItem todaysPomodoros = new MenuItem("Today");
+        todaysPomodoros.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                statisticsDialog.showDialog();
+            }
+        });
 
         statisticsMenu.add(options);
         statisticsMenu.addSeparator();
         statisticsMenu.add(todaysPomodoros);
 
         return statisticsMenu;
-
     }
 }

@@ -4,13 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>tomighty-statistics-plugin</groupId>
-    <artifactId>tomighty-statistics-plugin</artifactId>
+    <groupId>org.tomighty.plugin.statistics</groupId>
+    <artifactId>tomighty-statistics-parent</artifactId>
     <version>1.0</version>
+
     <modules>
         <module>statistics-core</module>
         <module>statistics-gui</module>
     </modules>
+
     <packaging>pom</packaging>
     <name>Tomighty Statistics Plugin</name>
 
@@ -122,6 +124,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
+                            <includeScope>runtime</includeScope>
                             <outputDirectory>${project.build.directory}/lib</outputDirectory>
                         </configuration>
                     </execution>

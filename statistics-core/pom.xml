@@ -19,13 +19,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>tomighty-statistics-plugin</artifactId>
-        <groupId>tomighty-statistics-plugin</groupId>
+        <artifactId>tomighty-statistics-parent</artifactId>
+        <groupId>org.tomighty.plugin.statistics</groupId>
         <version>1.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>statistics-core</artifactId>
+    <groupId>org.tomighty.plugin.statistics</groupId>
+    <version>1.0</version>
 
     <name>Tomighty Statistics Core</name>
 

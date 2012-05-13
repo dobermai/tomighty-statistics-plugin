@@ -19,8 +19,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>tomighty-statistics-plugin</artifactId>
-        <groupId>tomighty-statistics-plugin</groupId>
+        <artifactId>tomighty-statistics-parent</artifactId>
+        <groupId>org.tomighty.plugin.statistics</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -51,6 +51,21 @@
     <properties>
         <tomighty.plugin.folder>${user.home}/.tomighty/plugins/statistics-gui</tomighty.plugin.folder>
     </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.tomighty.plugin.statistics</groupId>
+            <artifactId>statistics-core</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-swing</artifactId>
+            <version>4.2</version>
+        </dependency>
+    </dependencies>
 
 
     <build>
