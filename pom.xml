@@ -9,6 +9,7 @@
     <version>1.0</version>
     <modules>
         <module>statistics-core</module>
+        <module>statistics-gui</module>
     </modules>
     <packaging>pom</packaging>
     <name>Tomighty Statistics Plugin</name>
