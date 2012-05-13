@@ -27,6 +27,11 @@
 
     <artifactId>statistics-core</artifactId>
 
+    <properties>
+        <tomighty.plugin.folder>${user.home}/.tomighty/plugins/statistics-core</tomighty.plugin.folder>
+
+    </properties>
+
 
     <dependencies>
         <dependency>
@@ -68,6 +73,20 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>${tomighty.plugin.folder}</directory>
+                            <!--<includes>-->
+                            <!--<include>${project.build.finalName}.${project.packaging}</include>-->
+                            <!--</includes>-->
+                        </fileset>
+                    </filesets>
+                </configuration>
             </plugin>
         </plugins>
     </build>
