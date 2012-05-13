@@ -3,3 +3,4 @@ target/
 .idea
 tomighty-statistics-plugin.iml
 statistics-core/statistics-core.iml
+statistics-gui/statistics-gui.iml
