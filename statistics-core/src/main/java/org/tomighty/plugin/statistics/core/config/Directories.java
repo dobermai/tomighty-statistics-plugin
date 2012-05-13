@@ -25,7 +25,7 @@ import java.io.File;
 public class Directories {
 
     private static final String STATS_DIR_NAME = "stats";
-    private static final String STATISTICS_PLUGIN_DIR_NAME = "statistics";
+    private static final String STATISTICS_PLUGIN_DIR_NAME = "statistics-core";
     private static final String PLUGIN_DIR_NAME = "plugins";
     private static final String TOMIGHTY_DIR_NAME = ".tomighty";
 
