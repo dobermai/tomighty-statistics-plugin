@@ -27,6 +27,27 @@
 
     <artifactId>statistics-core</artifactId>
 
+    <name>Tomighty Statistics Core</name>
+
+    <description>
+        The Core Plugin for statistics for pomodoros
+    </description>
+
+    <developers>
+        <developer>
+            <id>dobermai</id>
+            <name>Dominik Obermaier</name>
+            <email>dominik.obermaier@gmail.com</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
     <properties>
         <tomighty.plugin.folder>${user.home}/.tomighty/plugins/statistics-core</tomighty.plugin.folder>
 
