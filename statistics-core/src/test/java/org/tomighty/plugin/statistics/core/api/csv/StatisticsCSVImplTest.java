@@ -14,13 +14,13 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.api.csv;
+package org.tomighty.plugin.statistics.core.api.csv;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
-import org.tomighty.plugin.statistics.config.Directories;
+import org.tomighty.plugin.statistics.core.config.Directories;
 
 import java.io.File;
 

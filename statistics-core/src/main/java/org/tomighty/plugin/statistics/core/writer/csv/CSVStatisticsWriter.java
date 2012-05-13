@@ -14,16 +14,16 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.writer.csv;
+package org.tomighty.plugin.statistics.core.writer.csv;
 
 import au.com.bytecode.opencsv.CSVWriter;
 import org.joda.time.DateTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tomighty.Phase;
-import org.tomighty.plugin.statistics.config.Directories;
-import org.tomighty.plugin.statistics.writer.StatisticsWriter;
-import org.tomighty.plugin.statistics.writer.Status;
+import org.tomighty.plugin.statistics.core.config.Directories;
+import org.tomighty.plugin.statistics.core.writer.StatisticsWriter;
+import org.tomighty.plugin.statistics.core.writer.Status;
 
 import javax.inject.Inject;
 import java.io.File;

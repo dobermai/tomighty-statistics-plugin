@@ -94,7 +94,7 @@
             <!--<archive>-->
             <!--<manifest>-->
             <!--<addClasspath>true</addClasspath>-->
-            <!--<mainClass>org.tomighty.plugin.statistics.StatisticsPlugin</mainClass>-->
+            <!--<mainClass>org.tomighty.plugin.statistics.core.StatisticsPlugin</mainClass>-->
             <!--</manifest>-->
             <!--</archive>-->
             <!--<descriptorRefs>-->

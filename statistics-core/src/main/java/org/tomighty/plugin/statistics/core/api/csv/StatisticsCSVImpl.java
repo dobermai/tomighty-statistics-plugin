@@ -14,15 +14,16 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.api.csv;
+package org.tomighty.plugin.statistics.core.api.csv;
 
 import au.com.bytecode.opencsv.CSVReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.tomighty.plugin.statistics.Pomodoro;
-import org.tomighty.plugin.statistics.api.Statistics;
-import org.tomighty.plugin.statistics.config.Directories;
-import org.tomighty.plugin.statistics.util.csv.CSVUtil;
+import org.tomighty.plugin.statistics.core.Pomodoro;
+import org.tomighty.plugin.statistics.core.Pomodoro;
+import org.tomighty.plugin.statistics.core.api.Statistics;
+import org.tomighty.plugin.statistics.core.config.Directories;
+import org.tomighty.plugin.statistics.core.csv.CSVUtil;
 
 import javax.inject.Inject;
 import java.io.File;

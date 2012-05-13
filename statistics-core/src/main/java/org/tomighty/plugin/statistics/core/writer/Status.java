@@ -14,12 +14,9 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.writer;
+package org.tomighty.plugin.statistics.core.writer;
 
-import org.tomighty.Phase;
+public enum Status {
 
-public interface StatisticsWriter {
-
-
-    void append(Phase phase, Status status);
+    FINISHED, INTERRUPTED, STARTED
 }

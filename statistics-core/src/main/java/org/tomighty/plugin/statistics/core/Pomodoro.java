@@ -14,7 +14,7 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics;
+package org.tomighty.plugin.statistics.core;
 
 import java.util.Date;
 

@@ -14,31 +14,31 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.subscriber;
+package org.tomighty.plugin.statistics.core.subscriber;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tomighty.bus.Subscriber;
-import org.tomighty.bus.messages.timer.TimerStarted;
-import org.tomighty.plugin.statistics.writer.StatisticsWriter;
-import org.tomighty.plugin.statistics.writer.Status;
+import org.tomighty.bus.messages.timer.TimerFinished;
+import org.tomighty.plugin.statistics.core.writer.StatisticsWriter;
+import org.tomighty.plugin.statistics.core.writer.Status;
 
 import javax.inject.Inject;
 
-public class TimerStartedSubscriber implements Subscriber<TimerStarted> {
+public class TimerFinishedSubscriber implements Subscriber<TimerFinished> {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     private StatisticsWriter writer;
 
     @Inject
-    public TimerStartedSubscriber(StatisticsWriter writer) {
+    public TimerFinishedSubscriber(StatisticsWriter writer) {
         this.writer = writer;
     }
 
     @Override
-    public void receive(final TimerStarted timerStarted) {
-        writer.append(timerStarted.getPhase(), Status.STARTED);
-        log.debug("Received Started Event for phase {}", timerStarted.getPhase());
+    public void receive(final TimerFinished timerEnd) {
+        writer.append(timerEnd.getPhase(), Status.FINISHED);
+        log.debug("Received Finished Event for phase {}", timerEnd.getPhase());
     }
 }

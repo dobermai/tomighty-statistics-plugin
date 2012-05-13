@@ -14,14 +14,14 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.subscriber;
+package org.tomighty.plugin.statistics.core.subscriber;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tomighty.bus.Subscriber;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
-import org.tomighty.plugin.statistics.writer.StatisticsWriter;
-import org.tomighty.plugin.statistics.writer.Status;
+import org.tomighty.plugin.statistics.core.writer.StatisticsWriter;
+import org.tomighty.plugin.statistics.core.writer.Status;
 
 import javax.inject.Inject;
 

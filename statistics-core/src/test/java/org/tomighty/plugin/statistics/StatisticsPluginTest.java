@@ -22,6 +22,7 @@ import org.tomighty.bus.Subscriber;
 import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
 import org.tomighty.bus.messages.timer.TimerStarted;
+import org.tomighty.plugin.statistics.core.StatisticsPlugin;
 
 import static org.mockito.Mockito.*;
 

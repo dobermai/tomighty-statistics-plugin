@@ -14,12 +14,13 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.util.csv;
+package org.tomighty.plugin.statistics.core.csv;
 
 import org.joda.time.DateTime;
 import org.tomighty.Phase;
-import org.tomighty.plugin.statistics.Pomodoro;
-import org.tomighty.plugin.statistics.writer.Status;
+import org.tomighty.plugin.statistics.core.Pomodoro;
+import org.tomighty.plugin.statistics.core.Pomodoro;
+import org.tomighty.plugin.statistics.core.writer.Status;
 
 import java.util.Date;
 import java.util.List;

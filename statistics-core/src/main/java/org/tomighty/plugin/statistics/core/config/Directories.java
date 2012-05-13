@@ -14,7 +14,7 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.config;
+package org.tomighty.plugin.statistics.core.config;
 
 import org.apache.commons.io.FileUtils;
 

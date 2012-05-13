@@ -14,9 +14,18 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.writer;
+package org.tomighty.plugin.statistics.core;
 
-public enum Status {
+import com.google.inject.AbstractModule;
+import org.tomighty.plugin.statistics.core.api.Statistics;
+import org.tomighty.plugin.statistics.core.api.csv.StatisticsCSVImpl;
+import org.tomighty.plugin.statistics.core.writer.StatisticsWriter;
+import org.tomighty.plugin.statistics.core.writer.csv.CSVStatisticsWriter;
 
-    FINISHED, INTERRUPTED, STARTED
+public class Modules extends AbstractModule {
+    @Override
+    protected void configure() {
+        bind(StatisticsWriter.class).to(CSVStatisticsWriter.class);
+        bind(Statistics.class).to(StatisticsCSVImpl.class);
+    }
 }

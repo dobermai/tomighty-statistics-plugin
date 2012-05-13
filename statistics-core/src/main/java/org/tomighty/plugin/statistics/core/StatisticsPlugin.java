@@ -14,7 +14,7 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics;
+package org.tomighty.plugin.statistics.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,9 +23,9 @@ import org.tomighty.bus.messages.timer.TimerFinished;
 import org.tomighty.bus.messages.timer.TimerInterrupted;
 import org.tomighty.bus.messages.timer.TimerStarted;
 import org.tomighty.plugin.DefaultPlugin;
-import org.tomighty.plugin.statistics.subscriber.TimerFinishedSubscriber;
-import org.tomighty.plugin.statistics.subscriber.TimerInterruptedSubscriber;
-import org.tomighty.plugin.statistics.subscriber.TimerStartedSubscriber;
+import org.tomighty.plugin.statistics.core.subscriber.TimerFinishedSubscriber;
+import org.tomighty.plugin.statistics.core.subscriber.TimerInterruptedSubscriber;
+import org.tomighty.plugin.statistics.core.subscriber.TimerStartedSubscriber;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;

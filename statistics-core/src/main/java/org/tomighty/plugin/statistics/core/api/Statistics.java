@@ -14,9 +14,10 @@
  *      limitations under the License.
  */
 
-package org.tomighty.plugin.statistics.api;
+package org.tomighty.plugin.statistics.core.api;
 
-import org.tomighty.plugin.statistics.Pomodoro;
+import org.tomighty.plugin.statistics.core.Pomodoro;
+import org.tomighty.plugin.statistics.core.Pomodoro;
 
 import java.util.List;
 
